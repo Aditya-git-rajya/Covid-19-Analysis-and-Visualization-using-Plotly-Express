@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://img.shields.io/badge/Project%20Status-Complete-2A9D8F?style=for-the-badge&logo=github" alt="Project Status Badge">
 <img src="https://img.shields.io/badge/Visualization-Plotly%20Express-0077B6?style=for-the-badge&logo=plotly" alt="Plotly Express Badge">
-<img src="https://img.shields.io/badge/Data%20Source-Multiple%20CSVs-9C27B0?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMzUwLjIgMTMyLjRhMTMgMTMgMCAwIDAgLTguMi0xOC40bC0yMy45LTEzLjggYTkgOSAwIDAgMCAtMTIuNyA0LjVsLTg4LjUgMTUzbC04OC41LTE1MWE5IDkgMCAwIDAgLTEyLjctNC41bC0yMy45IDEzLjhhMTMgMTMgMCAwIDAgLTguMiAxOC40bDEwMS4xIDE3NS41YTEwIDEwIDAgMCAwIDE3LjQgMGwxMDEuMS0xNzUuNXpNMzQ0IDMyMEgxNjhjLTguOCAwLTE2IDcuMi0xNiAxNnY2NGMwIDguOCA3LjIgMTYgMTYgMTZoMTc2YzguOCAwIDE2LTcuMiAxNi0xNlYzMzZjMC04LjgtNy4yLTE2LTE2LTE2eiIvPjwvc3ZnPg==" alt="Data Source Badge">
+<img src="https://img.shields.io/badge/Data%20Source-Multiple%20CSVs-9C27B0?style=for-the-badge&logo=databricks" alt="Data Source Badge">
 </div>
 
 <h1 align="center">
@@ -62,7 +62,7 @@ This section details the objective and outcome of the main analytical steps with
 | **4. Global Case Snapshot** | Create an interactive **Choropleth Map** (using `px.choropleth`) shaded by **Total Confirmed Cases**. | **Geographical Impact.** Visually identified the major global hotspots and allowed for direct interaction with country data. |
 | **5. Animated Global Spread** | Plot the master time-series data using the `Date` column as the `animation_frame` parameter. | **Time-Lapse Storytelling.** Generated a powerful, animated map showing the virus's spread and growth day-by-day. |
 | **6. Total Trend & Regional Plots** | Use line plots to show the cumulative global confirmed cases and bar plots to compare **Confirmed vs. Recovered** cases by WHO Region. | **Growth & Balance.** Clearly illustrated the exponential growth curve and showed the pandemic's status (active vs. recovered) across major regions. |
-| **7. Mortality Detail** | Analyze the `coviddeath.csv` file to visualize fatalities by **Age Group** and **Underlying Condition**. | **Demographic Insight.** Provided a focused look at the specific demographic and health factors contributing to COVID-19 mortality. |
+| **7. Mortality Detail** | Analyze the `coviddeath.csv` file to visualize fatalities by **Age Group** and **Underlying Condition**. | **Demographic Insight.** Provided a focused look at the specific demographic and comorbidity factors that contributed most to COVID-19 mortality. |
 
 ---
 
@@ -75,9 +75,9 @@ It is important to acknowledge the critical limitations of any global COVID-19 a
 * **Time Lag:** The data (especially mortality) represents **lagging indicators** (effects of past infections), not real-time outbreaks.
 * **Merging Inconsistencies:** The quality of the final merged dataset relies on consistent naming and ISO codes across all source files; any discrepancy can lead to data loss or incorrect visualization.
 
-### Scalability and Hardware/Storage Constraints
+### Scalability and Storage Constraints
 * **Data Size:** While current CSVs are small, creating a true, ongoing pipeline with **hourly or sub-daily data** would generate massive data volumes.
-* **Storage Device:** Storing and retrieving this large volume of time-series data would require migrating from local drives to **high-performance cloud data lakes** (e.g., AWS S3, Azure Data Lake) or **distributed file systems** (HDFS) to ensure efficient access.
+* **Storage Device:** Storing and retrieving this large volume of time-series data would require migrating from local drives to **high-performance cloud data lakes** (e.g., AWS S3 or Google Cloud Storage) or **distributed file systems** (HDFS) to ensure efficient access.
 * **Visualization Performance:** Plotly Express is fast, but rendering complex interactive animations for millions of data points can cause **browser lag**, necessitating the use of **Datashader** for pre-aggregation on the server side.
 
 ---
