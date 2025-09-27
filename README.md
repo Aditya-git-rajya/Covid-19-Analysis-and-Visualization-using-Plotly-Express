@@ -5,7 +5,7 @@
 </div>
 
 <h1 align="center">
-<img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=600&height=70&duration=3000&lines=🦠%20COVID--19%20Global%20Analysis;%20Interactive%20Data%20Storytelling" />
+<img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=600&height=70&duration=3000&lines=🦠%20COVID--19%20Global%20Analysis;%20Interactive%20Data%20Storytelling&color=B22222" />
 </h1>
 
 ---
